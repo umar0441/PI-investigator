@@ -1,0 +1,264 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="3D — a Facebook-inspired social feed." />
+    <title>3D | Stay connected</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="dashboard-enhancements.css" />
+  </head>
+  <body>
+    <main id="loginView" class="login-page">
+      <section class="login-intro">
+        <div class="brand brand-light"><span class="brand-mark">3D</span></div>
+
+        <div class="intro-copy">
+          <p class="eyebrow">YOUR PEOPLE, YOUR MOMENTS</p>
+          <h1>Make space for the moments that matter.</h1>
+          <p class="intro-text">Connect with friends, share what inspires you, and find your people in a more thoughtful social space.</p>
+
+          <div class="member-avatars" aria-label="3D community members">
+            <span class="avatar avatar-a">JM</span>
+            <span class="avatar avatar-b">SK</span>
+            <span class="avatar avatar-c">AL</span>
+            <span class="avatar avatar-d">+</span>
+            <span class="member-count">Join 18k+ people already here</span>
+          </div>
+        </div>
+
+        <p class="copyright">© 2024 3D Inc.</p>
+      </section>
+
+      <section class="login-panel">
+        <div class="login-card">
+          <div class="brand brand-dark"><span class="brand-mark">3D</span></div>
+
+          <div class="login-heading">
+            <h2>Welcome back</h2>
+            <p>Log in to pick up where you left off.</p>
+          </div>
+
+          <form id="loginForm">
+            <label for="email">Email address</label>
+            <input id="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+
+            <div class="label-row">
+              <label for="password">Password</label>
+              <a href="#" id="forgotLink">Forgot password?</a>
+            </div>
+
+            <div class="password-field">
+              <input id="password" type="password" placeholder="Enter your password" autocomplete="current-password" required />
+              <button type="button" class="password-toggle" aria-label="Show password">Show</button>
+            </div>
+
+            <p id="loginError" class="form-error" role="alert"></p>
+            <button class="primary-button" type="submit">Log in <span>→</span></button>
+          </form>
+
+          <div class="or-divider"><span>or continue with</span></div>
+
+          <div class="social-buttons">
+            <button type="button" class="social-button">G <span>Google</span></button>
+            <button type="button" class="social-button"> <span>Apple</span></button>
+          </div>
+
+          <p class="signup-prompt">New to 3D? <a href="#" id="signupLink">Create an account</a></p>
+          <p class="demo-note">Demo: enter any valid email and a password to continue.</p>
+        </div>
+      </section>
+    </main>
+
+    <main id="appView" class="app-shell hidden">
+      <header class="topbar">
+        <div class="brand brand-dark"><span class="brand-mark">3D</span></div>
+
+        <div class="search-wrap">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="Search 3D" />
+        </div>
+
+        <div class="top-actions">
+          <button class="icon-button" aria-label="Messages">✉</button>
+          <button class="icon-button notification-button" aria-label="Notifications">♢<i></i></button>
+          <button class="profile-menu" type="button">
+            <span class="avatar avatar-profile">AS</span>
+            <span class="profile-name">Alex Smith</span>
+            <span>⌄</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="dashboard">
+        <aside class="sidebar">
+          <nav>
+            <a class="nav-item active" href="#"><span>⌂</span> Home</a>
+            <a class="nav-item" href="#"><span>♧</span> Explore</a>
+            <a class="nav-item" href="#"><span>♙</span> Friends <b>4</b></a>
+            <a class="nav-item" href="#"><span>▣</span> Saved</a>
+            <a class="nav-item" href="#"><span>◫</span> Watch</a>
+          </nav>
+
+          <div class="sidebar-section">
+            <p class="sidebar-label">Your shortcuts</p>
+            <a class="shortcut" href="#"><span class="shortcut-icon coral">✦</span> Design thinkers</a>
+            <a class="shortcut" href="#"><span class="shortcut-icon yellow">◉</span> Weekend hikers</a>
+            <a class="shortcut" href="#"><span class="shortcut-icon blue">♫</span> Music discoveries</a>
+          </div>
+
+          <div class="sidebar-bottom">
+            <a class="nav-item" href="#"><span>⚙</span> Settings</a>
+            <button id="logoutButton" class="logout-button" type="button">↪ Log out</button>
+          </div>
+        </aside>
+
+        <section class="feed-column">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">TUESDAY, OCTOBER 8</p>
+              <h1>Your feed</h1>
+            </div>
+            <button class="filter-button" type="button">Most recent <span>⌄</span></button>
+          </div>
+
+          <div class="stories-card">
+            <div class="stories-header">
+              <h3>Stories</h3>
+              <a href="#">See all</a>
+            </div>
+
+            <div class="stories-list">
+              <button class="story add-story" type="button">
+                <span class="story-avatar add">+</span>
+                <small>Your story</small>
+              </button>
+              <button class="story" type="button">
+                <span class="story-avatar story-one">MP</span>
+                <small>Maya</small>
+              </button>
+              <button class="story" type="button">
+                <span class="story-avatar story-two">JD</span>
+                <small>Jordan</small>
+              </button>
+              <button class="story" type="button">
+                <span class="story-avatar story-three">RC</span>
+                <small>Riley</small>
+              </button>
+              <button class="story" type="button">
+                <span class="story-avatar story-four">TN</span>
+                <small>Taylor</small>
+              </button>
+            </div>
+          </div>
+
+          <div class="composer-card">
+            <div class="composer-top">
+              <span class="avatar avatar-profile">AS</span>
+              <button id="composerTrigger" type="button">What&rsquo;s on your mind, Alex?</button>
+            </div>
+
+            <div id="composerPanel" class="composer-panel hidden">
+              <textarea id="postInput" rows="4" placeholder="Share an update with your community..."></textarea>
+              <div class="composer-controls">
+                <div class="composer-tools">
+                  <span>📷 Photo</span>
+                  <span>😊 Feeling</span>
+                  <span>📍 Check in</span>
+                </div>
+                <button id="postSubmit" class="primary-button small" type="button">Post</button>
+              </div>
+            </div>
+
+            <div class="composer-actions">
+              <button type="button">▧ <span>Photo</span></button>
+              <button type="button">☻ <span>Feeling</span></button>
+            </div>
+          </div>
+
+          <div id="posts" class="posts-list" aria-live="polite"></div>
+        </section>
+
+        <aside class="right-rail">
+          <div class="rail-card">
+            <div class="rail-heading">
+              <h3>People you may know</h3>
+              <a href="#">See all</a>
+            </div>
+
+            <div class="person-row">
+              <span class="avatar avatar-pink">EC</span>
+              <div>
+                <strong>Emma Chen</strong>
+                <small>12 mutual friends</small>
+              </div>
+              <button class="add-friend" type="button">+</button>
+            </div>
+
+            <div class="person-row">
+              <span class="avatar avatar-green">NO</span>
+              <div>
+                <strong>Noah Okafor</strong>
+                <small>8 mutual friends</small>
+              </div>
+              <button class="add-friend" type="button">+</button>
+            </div>
+
+            <div class="person-row">
+              <span class="avatar avatar-orange">SW</span>
+              <div>
+                <strong>Sofia Williams</strong>
+                <small>5 mutual friends</small>
+              </div>
+              <button class="add-friend" type="button">+</button>
+            </div>
+          </div>
+
+          <div class="rail-card upcoming">
+            <div class="rail-heading">
+              <h3>Upcoming</h3>
+              <a href="#">See calendar</a>
+            </div>
+
+            <div class="event-row">
+              <span class="date-tile"><b>14</b><small>OCT</small></span>
+              <div>
+                <strong>Design community meetup</strong>
+                <small>6:00 PM · The Workshop</small>
+              </div>
+            </div>
+
+            <div class="event-row">
+              <span class="date-tile purple"><b>19</b><small>OCT</small></span>
+              <div>
+                <strong>Emma&rsquo;s birthday</strong>
+                <small>All day</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="rail-card trending">
+            <div class="rail-heading">
+              <h3>Trending now</h3>
+            </div>
+
+            <ul>
+              <li><span>#DesignLife</span><small>2.4k posts</small></li>
+              <li><span>#CityWalks</span><small>1.1k posts</small></li>
+              <li><span>#WeekendPlans</span><small>867 posts</small></li>
+              <li><span>#SmallWins</span><small>432 posts</small></li>
+            </ul>
+          </div>
+
+          <p class="rail-footer">Privacy · Terms · Help · © 2024 3D</p>
+        </aside>
+      </div>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
